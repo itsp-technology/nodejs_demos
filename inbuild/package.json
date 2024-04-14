@@ -1,0 +1,20 @@
+{
+  "name": "inbuild",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticapi.js",
+    "dev": "node http.js",
+    "devref": "nodemon http.js"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "v",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
