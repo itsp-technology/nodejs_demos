@@ -10,7 +10,7 @@ dotenv.config();
 let fs = require('fs');
 let port = process.env.PORT || 4000; 
 
-app.use(morgan('tiny'));
+app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}));
 
 let ProMod = require('./controller/producte');
 let CatMod = require("./controller/category");
