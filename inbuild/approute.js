@@ -2,7 +2,7 @@ let exppress = require('express');
 let dotenv = require('dotenv');
 let app = exppress();
 let producteRoute = exppress.Router();
-let cotogoryRoute = exppress.Router();
+let categoryRoute = exppress.Router();
 dotenv.config();
 let port = process.env.PORT;
 
@@ -559,7 +559,17 @@ producteRoute.route('/getroute').get((req,res)=>{
     res.send("get data ");
 })
 
+categoryRoute.route('/').get((req,res)=>{
+    res.send(category);
+})
+
+categoryRoute.route('/details').get((req,res)=>{
+    res.send("Catoger Detals");
+})
+
+
 app.use('/pro',producteRoute);
+app.use('/cat',categoryRoute);
 
 
 app.listen(port , (err)=>{
