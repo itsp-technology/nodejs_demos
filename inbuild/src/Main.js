@@ -1,11 +1,16 @@
 let express = require('express');
 
+//for logs
+let morgan = require('morgan');
+
 let app = express();
 
 let dotenv = require('dotenv');
 dotenv.config();
-
+let fs = require('fs');
 let port = process.env.PORT || 4000; 
+
+app.use(morgan('tiny'));
 
 let ProMod = require('./controller/producte');
 let CatMod = require("./controller/category");
