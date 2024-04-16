@@ -21,7 +21,7 @@ app.set('views','./views');
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-    res.render('index',{t:'this text data from js file to ejs '});
+    res.render('index',{t:'this text data from js file to ejs ',data:ProMod});
 })
 
 app.use('/products',ProMod);
