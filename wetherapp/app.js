@@ -20,8 +20,8 @@ app.get('/weather',(req,res)=>{
     //calling the api 
     request(url,(err,response)=>{
         const output = JSON.parse(response.body);
-        //res.render('index',{title:'Weather App ',result:output})
-        res.send(response.body);
+        res.render('index',{title:'Weather App ',result:output})
+        //res.send(response.body);
     })
 })
 
