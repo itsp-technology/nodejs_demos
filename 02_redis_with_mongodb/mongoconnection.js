@@ -42,3 +42,5 @@ app.listen(port,(err) => {
     main()
     console.log(`Server is runnig on port ${port}`)
 })
+
+// endpoint for hiting http://localhost:8770/data?item=paper
