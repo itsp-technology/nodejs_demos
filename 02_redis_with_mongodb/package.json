@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node mongodbconnection.js",
-    "dev" : "nodemon start.js"
+    "dev" : "nodemon start.js",
+    "mytest" : "nodemon test.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,7 @@
     "express": "^4.19.2",
     "mongodb": "^5.2.0",
     "redis": "^4.6.5"
-  }
+  },
+  "type": "module"
+
 }
