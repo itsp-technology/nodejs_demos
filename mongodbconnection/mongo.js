@@ -2,14 +2,14 @@ let express = require('express');
 let mongodb = require('mongodb');
 
 
-let uri = "mongodb://localhost:27017";
-const client = new MongoClient(uri);
+const url = "mongodb://localhost:27017";
+const mClient = new MongoClient(url)
 
 let app = express();
 
 const dbname = 'inventory';
 
-app.get('/', async (req,res)=>{
+app.get('/data', async (req,res)=>{
     try{
         await client.connect();
     
